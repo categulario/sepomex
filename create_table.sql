@@ -1,0 +1,21 @@
+CREATE TABLE `sepomex` (
+  `d_codigo` varchar(5) NOT NULL,
+  `d_asenta` varchar(100) NOT NULL,
+  `d_tipo_asenta` varchar(50) DEFAULT NULL,
+  `D_mnpio` varchar(100) DEFAULT NULL,
+  `d_estado` varchar(50) DEFAULT NULL,
+  `d_ciudad` varchar(50) DEFAULT NULL,
+  `d_CP` varchar(5) DEFAULT NULL,
+  `c_estado` int(11) DEFAULT NULL,
+  `c_oficina` int(11) DEFAULT NULL,
+  `c_CP` int(11) DEFAULT NULL,
+  `c_tipo_asenta` int(11) DEFAULT NULL,
+  `c_mnpio` int(11) DEFAULT NULL,
+  `id_asenta_cpcons` int(11) NOT NULL,
+  `d_zona` varchar(45) DEFAULT NULL,
+  `c_cve_ciudad` int(11) DEFAULT NULL,
+  PRIMARY KEY (`d_codigo`,`d_asenta`,`id_asenta_cpcons`),
+  KEY `cp` (`d_codigo`),
+  FULLTEXT KEY `ftx` (`d_codigo`,`d_asenta`,`D_mnpio`,`d_estado`),
+  FULLTEXT KEY `ftcpmn` (`d_codigo`,`D_mnpio`)
+) ENGINE=InnoDB DEFAULT CHARSET=unicode_ci;
