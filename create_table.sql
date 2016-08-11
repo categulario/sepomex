@@ -18,4 +18,4 @@ CREATE TABLE `sepomex` (
   KEY `cp` (`d_codigo`),
   FULLTEXT KEY `ftx` (`d_codigo`,`d_asenta`,`D_mnpio`,`d_estado`),
   FULLTEXT KEY `ftcpmn` (`d_codigo`,`D_mnpio`)
-) ENGINE=InnoDB DEFAULT CHARSET=unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
